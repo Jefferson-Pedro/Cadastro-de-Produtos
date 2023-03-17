@@ -1,4 +1,4 @@
-<h1> Cadastro de Cursos </h1>
+<h1> Stars Produtos </h1>
 <p> Projeto Desenvolvido com o curso Angular da Coders </p>
 
 <h3>Status do Projeto</h3>
