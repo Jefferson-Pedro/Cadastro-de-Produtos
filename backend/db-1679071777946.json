@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC Azul",
+      "price": 2.89
+    },
+    {
+      "id": 2,
+      "name": "Caderno 20 Materias",
+      "price": 20
+    },
+    {
+      "id": 3,
+      "name": "Lapís de Cor",
+      "price": 6.23
+    }
+  ]
+}
