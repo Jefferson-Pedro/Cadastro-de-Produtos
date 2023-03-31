@@ -6,6 +6,12 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +24,7 @@ import { ProductsCrudComponent } from './views/products-crud/products-crud.compo
 import { BlueDirective } from './directives/blue.directive';
 import { ForDirective } from './directives/for.directive';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
 
 
 @NgModule({ //Components, Diretivas e Pipes
@@ -30,7 +37,8 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     ProductsCrudComponent,
     BlueDirective,
     ForDirective,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ProductReadComponent
   ],
   imports: [ //Outros Modulos a serem usados no Modulo atual
     BrowserModule,
@@ -40,7 +48,12 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule,
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [], //Serviços que ficarão disponiveis para os Components declarados no Modulo atual.
   bootstrap: [AppComponent]

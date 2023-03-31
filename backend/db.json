@@ -19,6 +19,31 @@
       "name": "Notebook",
       "price": "2500",
       "id": 4
+    },
+    {
+      "name": "Estojo",
+      "price": "9.99",
+      "id": 5
+    },
+    {
+      "name": "Corretivo Liquido",
+      "price": "5.26",
+      "id": 6
+    },
+    {
+      "name": "",
+      "price": null,
+      "id": 7
+    },
+    {
+      "name": "",
+      "price": null,
+      "id": 8
+    },
+    {
+      "name": "Marcador de Texto",
+      "price": "6.50",
+      "id": 9
     }
   ]
 }
