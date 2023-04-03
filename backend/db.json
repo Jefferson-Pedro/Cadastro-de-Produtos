@@ -31,18 +31,18 @@
       "id": 6
     },
     {
-      "name": "",
-      "price": null,
+      "name": "Lapis Preto",
+      "price": "0.99",
       "id": 7
     },
     {
-      "name": "",
-      "price": null,
+      "name": "Marcador de Texto",
+      "price": "6.98",
       "id": 8
     },
     {
-      "name": "Marcador de Texto",
-      "price": "6.50",
+      "name": "Corretivo Liquido",
+      "price": "6.98",
       "id": 9
     }
   ]

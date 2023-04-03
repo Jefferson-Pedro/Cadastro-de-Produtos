@@ -23,10 +23,15 @@ export class ProductCreateComponent implements OnInit {
   ngOnInit(): void {}
 
   createProduct(): void{
-    this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage('Produto criado!');
-      this.router.navigate(['products']);
-    })
+    this.productService.create(this.product).subscribe({
+      next: () =>{
+        this.productService.showMessage('Produto criado!');
+        this.router.navigate(['products']);
+      }, 
+      error(err) {
+        alert("Erro! Infelizmente a Lista não pode ser cadastrada 😞");
+      }
+    });
   }
 
   cancel(): void{

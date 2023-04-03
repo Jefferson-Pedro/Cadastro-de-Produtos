@@ -1,4 +1,6 @@
-import { NgModule } from '@angular/core';
+import  localePt  from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -11,7 +13,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +31,8 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 
 
+registerLocaleData(localePt);
+
 @NgModule({ //Components, Diretivas e Pipes
   declarations: [
     AppComponent,
@@ -38,7 +44,8 @@ import { ProductReadComponent } from './components/product/product-read/product-
     BlueDirective,
     ForDirective,
     ProductCreateComponent,
-    ProductReadComponent
+    ProductReadComponent,
+
   ],
   imports: [ //Outros Modulos a serem usados no Modulo atual
     BrowserModule,
@@ -53,9 +60,15 @@ import { ProductReadComponent } from './components/product/product-read/product-
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
-  providers: [], //Serviços que ficarão disponiveis para os Components declarados no Modulo atual.
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: 'pt-BR'
+}], //Serviços que ficarão disponiveis para os Components declarados no Modulo atual.
   bootstrap: [AppComponent]
 })
 export class AppModule { }
