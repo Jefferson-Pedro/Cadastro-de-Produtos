@@ -7,8 +7,8 @@
     },
     {
       "id": 2,
-      "name": "Caderno 20 Materias",
-      "price": 20
+      "name": "Caderno 10 Matérias",
+      "price": "15"
     },
     {
       "id": 3,
@@ -16,8 +16,8 @@
       "price": 6.23
     },
     {
-      "name": "Notebook",
-      "price": "2500",
+      "name": "Notebook Plus",
+      "price": "3600",
       "id": 4
     },
     {

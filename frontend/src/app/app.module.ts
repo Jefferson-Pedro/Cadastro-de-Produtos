@@ -29,6 +29,7 @@ import { BlueDirective } from './directives/blue.directive';
 import { ForDirective } from './directives/for.directive';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 
 
 registerLocaleData(localePt);
@@ -45,6 +46,7 @@ registerLocaleData(localePt);
     ForDirective,
     ProductCreateComponent,
     ProductReadComponent,
+    ProductUpdateComponent,
 
   ],
   imports: [ //Outros Modulos a serem usados no Modulo atual

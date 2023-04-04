@@ -3,6 +3,7 @@ import { Product } from './../product.model';
 
 import {Component} from '@angular/core';
 import { Observable } from 'rxjs';
+import { ActivatedRoute, Route } from '@angular/router';
 
 
 @Component({
@@ -15,8 +16,10 @@ export class ProductReadComponent {
   displayedColumns: string[] = ['id', 'name', 'price', 'action'];
   //data: Product[];
   data$: Observable<Product[]>
+  product: Product;
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService,
+              private route: ActivatedRoute ) {
     /*this.productService.read().subscribe({ 
       next: (products: Product[]) => {
         this.data = products;
@@ -25,6 +28,10 @@ export class ProductReadComponent {
     this.data$ = this.productService.read();
   }
 
-  ngOnInit(): void {}
-
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.productService.readById(id!).subscribe(product => {
+      this.product = product;
+    });
+  }
 }

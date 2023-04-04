@@ -22,6 +22,14 @@ export class ProductService {
     });
   }
 
+  ShowErrorMessage(msg: String): void{
+    this.snackBar.open('Erro ao salvar curso', 'X', { 
+      duration: 3000,
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+    });
+  }
+
   create(product: Product): Observable<Product> {
     return this.http.post<Product>(this.baseUrl, product);
   }
@@ -31,12 +39,17 @@ export class ProductService {
   }
   
   readById(id: string): Observable<Product>{
-    const url = `${this.baseUrl}/${id}`
+    const url = `${this.baseUrl}/${id}`;
     return this.http.get<Product>(url);
   }
 
   update(product: Product): Observable<Product>{
-    const url = `${this.baseUrl}/${product.id}`
-    return this.http.put<Product>(url, product)
+    const url = `${this.baseUrl}/${product.id}`;
+    return this.http.put<Product>(url, product);
+  }
+
+  delete(id: string): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<Product>(url);
   }
 }
