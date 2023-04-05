@@ -16,9 +16,7 @@ export class ProductCreateComponent implements OnInit {
   }
 
   constructor(private productService: ProductService,
-              private router: Router){
-    
-  }
+              private router: Router){}
 
   ngOnInit(): void {}
 
@@ -28,8 +26,8 @@ export class ProductCreateComponent implements OnInit {
         this.productService.showMessage('Produto criado!');
         this.router.navigate(['products']);
       }, 
-      error(err) {
-        alert("Erro! Infelizmente a Lista não pode ser cadastrada 😞");
+      error: (error) => { 
+        this.productService.ShowErrorMessage('Erro ao salvar o produto!') ;
       }
     });
   }

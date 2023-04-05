@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { Product } from './product.model';
@@ -19,14 +18,16 @@ export class ProductService {
       duration: 3000,
       horizontalPosition: 'right',
       verticalPosition: 'top',
+      panelClass:["msg-sucess"]
     });
   }
 
-  ShowErrorMessage(msg: String): void{
-    this.snackBar.open('Erro ao salvar curso', 'X', { 
+  ShowErrorMessage(msg: string): void{
+    this.snackBar.open(msg, 'X', { 
       duration: 3000,
       horizontalPosition: 'right',
       verticalPosition: 'top',
+      panelClass:['msg-error']
     });
   }
 
