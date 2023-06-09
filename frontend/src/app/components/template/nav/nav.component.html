@@ -3,7 +3,7 @@
     class="sidenav"
     mode="side"
     opened
-    
+    fixedInViewport="true"
     fixedTopGap="64"
   >
     <mat-nav-list class="nav-list">
@@ -21,7 +21,7 @@
       </a>
     </mat-nav-list>
   </mat-sidenav>
-  <div class="content">
+  <mat-sidenav-content class="content">
     <router-outlet></router-outlet>
-  </div>
+  </mat-sidenav-content>
 </mat-sidenav-container>
