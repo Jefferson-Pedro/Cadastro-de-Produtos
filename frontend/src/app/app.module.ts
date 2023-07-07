@@ -19,7 +19,6 @@ import { MatSortModule } from '@angular/material/sort';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
@@ -32,6 +31,9 @@ import { ProductReadComponent } from './components/product/product-read/product-
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 
+//TENTATIVA DE CALENDARIO
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 registerLocaleData(localePt);
 
@@ -49,6 +51,7 @@ registerLocaleData(localePt);
     ProductReadComponent,
     ProductUpdateComponent,
     ProductDeleteComponent,
+    CalendarComponent,
 
   ],
   imports: [ //Outros Modulos a serem usados no Modulo atual
@@ -67,7 +70,8 @@ registerLocaleData(localePt);
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    FullCalendarModule
   ],
   providers: [{
     provide: LOCALE_ID,

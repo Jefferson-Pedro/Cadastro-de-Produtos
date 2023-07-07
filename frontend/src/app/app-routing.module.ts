@@ -6,6 +6,7 @@ import { ProductsCrudComponent } from './views/products-crud/products-crud.compo
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 
 const routes: Routes = [{
@@ -23,6 +24,10 @@ const routes: Routes = [{
 }, {
   path:"products/delete/:id",
   component: ProductDeleteComponent
+},
+{
+  path:"calendar",
+  component: CalendarComponent
 }
 ];
 

@@ -88,10 +88,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/fullcalendar/dist/fullcalendar.min.css",
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/momento/momento.js",
+              "node_modules/fullcalendar/dist/fullcalendar.min.js"
+            ]
           }
         }
       }
